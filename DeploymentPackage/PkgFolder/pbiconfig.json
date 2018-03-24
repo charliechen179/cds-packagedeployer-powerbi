@@ -1,0 +1,36 @@
+{
+  "clientId": "#{pbipubClientId}#",
+  "clientSecret": "#{pbipubClientSecret}#",
+  "username": "#{dynUserName}#",
+  "password": "#{dynPassword}#",
+  "pbiUpdates": [
+    {
+      "reportFileName": "Sample.pbix",
+      "groupName": "#{pbiGroup}#",
+      "dataSourceUpdates": {
+        "updateDetails": [
+          {
+            "connectionDetails": {
+              "url": "https://#{dynDomain}#.api.crm.dynamics.com/api/data/v8.2"
+            },
+            "datasourceSelector": {
+              "datasourceType": "OData",
+              "connectionDetails": {
+                "url": "https://dkdt-pbideploy-dev.api.crm.dynamics.com/api/data/v8.2"
+              }
+            }
+          }
+        ]
+      },
+      "dashboardUpdates": [
+        {
+          "dashboardId": "2d6c3c1b-7b2f-e811-a958-000d3a3702ca",
+          "reportIdToFind": "af70a0f7-f9e3-41c3-8b2b-3e8675e6b4a3",
+          "reportIdToReplace": "",
+          "groupIdToFind": "f03e8123-9d1f-4cc3-a544-21a12b9a39d4",
+          "groupIdToReplace": ""
+        }
+      ]
+    }
+  ]
+}
