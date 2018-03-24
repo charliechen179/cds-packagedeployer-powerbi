@@ -1,0 +1,266 @@
+{
+  "source": 2,
+  "id": 1,
+  "revision": 6,
+  "name": "master release",
+  "description": null,
+  "createdBy": {
+    "displayName": "Marc Schweigert",
+    "url": "https://app.vssps.visualstudio.com/A23c752fb-0c7e-40ce-b5fc-276e6094b415/_apis/Identities/6582fd44-c7b5-6af6-8054-e8e93761fc9c",
+    "_links": { "avatar": { "href": "https://dkdtdevops.visualstudio.com/_api/_common/identityImage?id=6582fd44-c7b5-6af6-8054-e8e93761fc9c" } },
+    "id": "6582fd44-c7b5-6af6-8054-e8e93761fc9c",
+    "uniqueName": "admin@dkdtdevops.onmicrosoft.com",
+    "imageUrl": "https://dkdtdevops.visualstudio.com/_api/_common/identityImage?id=6582fd44-c7b5-6af6-8054-e8e93761fc9c",
+    "descriptor": "aad.NjU4MmZkNDQtYzdiNS03YWY2LTgwNTQtZThlOTM3NjFmYzlj"
+  },
+  "createdOn": "2018-03-24T17:07:11.547Z",
+  "modifiedBy": {
+    "displayName": "Marc Schweigert",
+    "url": "https://app.vssps.visualstudio.com/A23c752fb-0c7e-40ce-b5fc-276e6094b415/_apis/Identities/6582fd44-c7b5-6af6-8054-e8e93761fc9c",
+    "_links": { "avatar": { "href": "https://dkdtdevops.visualstudio.com/_api/_common/identityImage?id=6582fd44-c7b5-6af6-8054-e8e93761fc9c" } },
+    "id": "6582fd44-c7b5-6af6-8054-e8e93761fc9c",
+    "uniqueName": "admin@dkdtdevops.onmicrosoft.com",
+    "imageUrl": "https://dkdtdevops.visualstudio.com/_api/_common/identityImage?id=6582fd44-c7b5-6af6-8054-e8e93761fc9c",
+    "descriptor": "aad.NjU4MmZkNDQtYzdiNS03YWY2LTgwNTQtZThlOTM3NjFmYzlj"
+  },
+  "modifiedOn": "2018-03-24T17:35:40.950Z",
+  "isDeleted": false,
+  "path": "\\",
+  "variables": {
+    "dynConnectionString": { "value": "AuthType=Office365;Username=$(dynUserName);Url=$(dynUrl);Password=$(dynPassword)" },
+    "dynUrl": { "value": "https://$(dynDomain).crm.dynamics.com" },
+    "dynUserName": { "value": "$(dynUser)@$(dynTenant)" }
+  },
+  "variableGroups": [],
+  "environments": [
+    {
+      "id": 1,
+      "name": "Sample",
+      "rank": 1,
+      "owner": {
+        "displayName": "Marc Schweigert",
+        "url": "https://app.vssps.visualstudio.com/A23c752fb-0c7e-40ce-b5fc-276e6094b415/_apis/Identities/6582fd44-c7b5-6af6-8054-e8e93761fc9c",
+        "_links": { "avatar": { "href": "https://dkdtdevops.visualstudio.com/_api/_common/identityImage?id=6582fd44-c7b5-6af6-8054-e8e93761fc9c" } },
+        "id": "6582fd44-c7b5-6af6-8054-e8e93761fc9c",
+        "uniqueName": "admin@dkdtdevops.onmicrosoft.com",
+        "imageUrl": "https://dkdtdevops.visualstudio.com/_api/_common/identityImage?id=6582fd44-c7b5-6af6-8054-e8e93761fc9c",
+        "descriptor": "aad.NjU4MmZkNDQtYzdiNS03YWY2LTgwNTQtZThlOTM3NjFmYzlj"
+      },
+      "variables": {
+        "dynDomain": { "value": "your-dyn-domain" },
+        "dynPassword": {
+          "value": null,
+          "isSecret": true
+        },
+        "dynTenant": { "value": "yourtenant.onmicrosoft.com" },
+        "dynUser": { "value": "youruser" },
+        "pbiGroup": { "value": "$(dynDomain)" },
+        "pbipubClientId": {
+          "value": null,
+          "isSecret": true
+        },
+        "pbipubClientSecret": {
+          "value": null,
+          "isSecret": true
+        }
+      },
+      "variableGroups": [],
+      "preDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 1
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 1
+        }
+      },
+      "deployStep": { "id": 2 },
+      "postDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 3
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 2
+        }
+      },
+      "deployPhases": [
+        {
+          "deploymentInput": {
+            "parallelExecution": { "parallelExecutionType": "none" },
+            "skipArtifactsDownload": false,
+            "artifactsDownloadInput": { "downloadInputs": [] },
+            "queueId": 9,
+            "demands": [],
+            "enableAccessToken": false,
+            "timeoutInMinutes": 0,
+            "jobCancelTimeoutInMinutes": 1,
+            "condition": "succeeded()",
+            "overrideInputs": {}
+          },
+          "rank": 1,
+          "phaseType": 1,
+          "name": "Agent phase",
+          "workflowTasks": [
+            {
+              "taskId": "a8515ec8-7254-4ffd-912c-86772e2b5962",
+              "version": "2.*",
+              "name": "Replace tokens in pbiconfig.json",
+              "refName": "",
+              "enabled": true,
+              "alwaysRun": false,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "definitionType": "task",
+              "overrideInputs": {},
+              "condition": "succeeded()",
+              "inputs": {
+                "rootDirectory": "$(System.DefaultWorkingDirectory)/master build/drop/DeploymentPackage/bin/Release/PkgFolder",
+                "targetFiles": "pbiconfig.json",
+                "encoding": "auto",
+                "writeBOM": "true",
+                "actionOnMissing": "warn",
+                "keepToken": "false",
+                "tokenPrefix": "#{",
+                "tokenSuffix": "}#",
+                "emptyValue": "(empty)",
+                "escapeChar": "",
+                "charsToEscape": ""
+              }
+            },
+            {
+              "taskId": "f41ba110-0b12-45bc-94c9-67655cb59323",
+              "version": "9.*",
+              "name": "Deploy Package",
+              "refName": "",
+              "enabled": true,
+              "alwaysRun": false,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "definitionType": "task",
+              "overrideInputs": {},
+              "condition": "succeeded()",
+              "inputs": {
+                "crmSdkVersion": "9.0.0",
+                "crmConnectionString": "$(dynConnectionString)",
+                "packageName": "DeploymentPackage.dll",
+                "packageDirectory": "$(System.DefaultWorkingDirectory)/master build/drop/DeploymentPackage/bin/Release"
+              }
+            }
+          ]
+        }
+      ],
+      "environmentOptions": {
+        "emailNotificationType": "OnlyOnFailure",
+        "emailRecipients": "release.environment.owner;release.creator",
+        "skipArtifactsDownload": false,
+        "timeoutInMinutes": 0,
+        "enableAccessToken": false,
+        "publishDeploymentStatus": true,
+        "badgeEnabled": false,
+        "autoLinkWorkItems": false
+      },
+      "demands": [],
+      "conditions": [
+        {
+          "name": "ReleaseStarted",
+          "conditionType": 1,
+          "value": ""
+        }
+      ],
+      "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+      },
+      "schedules": [],
+      "retentionPolicy": {
+        "daysToKeep": 30,
+        "releasesToKeep": 3,
+        "retainBuild": true
+      },
+      "processParameters": {},
+      "properties": {},
+      "preDeploymentGates": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "postDeploymentGates": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "badgeUrl": "https://dkdtdevops.vsrm.visualstudio.com/_apis/public/Release/badge/d83da0b8-dafe-4064-b558-6610256bcf57/1/1"
+    }
+  ],
+  "artifacts": [
+    {
+      "sourceId": "d83da0b8-dafe-4064-b558-6610256bcf57:6",
+      "type": "Build",
+      "alias": "master build",
+      "definitionReference": {
+        "artifactSourceDefinitionUrl": {
+          "id": "https://dkdtdevops.visualstudio.com/_permalink/_build/index?collectionId=d9f3dc16-657a-4720-bce2-9a7f421ec538&projectId=d83da0b8-dafe-4064-b558-6610256bcf57&definitionId=6",
+          "name": ""
+        },
+        "defaultVersionBranch": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionSpecific": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionTags": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionType": {
+          "id": "latestType",
+          "name": "Latest"
+        },
+        "definition": {
+          "id": "6",
+          "name": "master build"
+        },
+        "project": {
+          "id": "d83da0b8-dafe-4064-b558-6610256bcf57",
+          "name": "cds-packagedeployer-powerbi"
+        }
+      },
+      "isPrimary": true
+    }
+  ],
+  "triggers": [],
+  "releaseNameFormat": "Release-$(rev:r)",
+  "url": "https://dkdtdevops.vsrm.visualstudio.com/d83da0b8-dafe-4064-b558-6610256bcf57/_apis/Release/definitions/1",
+  "_links": {
+    "self": { "href": "https://dkdtdevops.vsrm.visualstudio.com/d83da0b8-dafe-4064-b558-6610256bcf57/_apis/Release/definitions/1" },
+    "web": { "href": "https://dkdtdevops.visualstudio.com/d83da0b8-dafe-4064-b558-6610256bcf57/_release?definitionId=1" }
+  },
+  "tags": [],
+  "properties": {
+    "DefinitionCreationSource": {
+      "$type": "System.String",
+      "$value": "ReleaseNew"
+    }
+  }
+}
